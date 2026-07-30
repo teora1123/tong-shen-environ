@@ -279,7 +279,7 @@ h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 600; line-height: 1.
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../images/banner-bg.png') center/cover no-repeat;
+    background: url('../images/banner-bg.jpg') center/cover no-repeat;
     opacity: 0.8;
     z-index: 0;
 }
