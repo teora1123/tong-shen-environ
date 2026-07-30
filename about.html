@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="了解江苏同申环境科技有限公司的发展历程、核心价值观与专业团队。专注环境工程，用科技创造绿色未来。">
+    <title>关于我们 — 江苏同申环境科技有限公司</title>
+    <link rel="stylesheet" href="css/style.css?v=11">
+    <style>
+        /* 公司简介双栏 */
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-intro p {
+            color: var(--gray-700);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* 价值观卡片 */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 3px solid var(--primary);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .value-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .value-card p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--primary-border);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+            padding-right: calc(50% + 32px);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+            padding-left: calc(50% + 32px);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border: 3px solid var(--white);
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            z-index: 1;
+            top: 6px;
+        }
+
+        .timeline-year {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 6px;
+        }
+
+        .timeline-content p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-intro {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding: 0 0 0 52px;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">同申环境</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="about.html">关于我们</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html">公司简介</a>
+                        <a href="about.html#values">核心价值观</a>
+                        <a href="about.html#strengths">核心优势</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html">服务项目</a>
+                    <div class="nav-dropdown">
+                        <a href="products.html">污水处理</a>
+                        <a href="products.html">大气治理</a>
+                        <a href="products.html">固废处理</a>
+                        <a href="products.html">生态修复</a>
+                        <a href="products.html">环境评估</a>
+                        <a href="products.html">环保咨询</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>关于我们</h1>
+            <p class="breadcrumb"><a href="index.html">首页</a> / 关于我们</p>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="section" style="padding-top: 80px;">
+        <div class="container">
+            <div class="about-intro">
+                <div>
+                    <h2>公司简介</h2>
+                    <p>江苏同申环境科技有限公司成立于2025年，坐落于常州市金坛区华罗庚创新中心。公司由同济大学环境工程领域科研团队发起创立，致力于将高校前沿技术转化为实用的环保工程方案。</p>
+                    <p>我们聚焦污水处理、大气治理、固废处理与生态修复四大方向，提供从环境评估、方案设计到施工运营的全流程服务。</p>
+                    <p>作为一家技术驱动型初创企业，同申环境不追求大而全，专注把每一个项目做扎实。以科研的深度，做工程的态度，走稳每一步。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/37320179/pexels-photo-37320179.jpeg?auto=compress&cs=tinysrgb&w=800" alt="江苏同申环境科技有限公司">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心价值观 -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">核心价值观</h2>
+            <p class="section-subtitle">引领我们前行的信念</p>
+            <div class="values-grid">
+                <div class="card value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>创新</h3>
+                    <p>持续探索环保新技术，以科技驱动行业发展</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">⭐</div>
+                    <h3>品质</h3>
+                    <p>严格把控每一个环节，交付经得起检验的工程</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>责任</h3>
+                    <p>以守护生态环境为己任，践行企业社会责任</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>共赢</h3>
+                    <p>与客户、伙伴共同成长，实现可持续发展</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="section section-alt" id="strengths">
+        <div class="container">
+            <h2 class="section-title">核心优势</h2>
+            <p class="section-subtitle">小步快跑，扎实交付</p>
+            <div class="values-grid">
+                <div class="card value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>科研基因</h3>
+                    <p>核心技术团队来自同济大学环境工程实验室，每一份方案都有学术支撑</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>敏捷响应</h3>
+                    <p>扁平团队，无层层审批。客户需求48小时内出方案，小活不嫌小，急活不推脱</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">📍</div>
+                    <h3>区位优势</h3>
+                    <p>入驻华罗庚创新中心，共享园区实验资源与产业政策，降低客户合作成本</p>
+                </div>
+                <div class="card value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>务实交付</h3>
+                    <p>不画饼、不堆概念。每个项目用数据说话——进水指标、出水指标、运维成本，清清楚楚</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>江苏同申环境科技有限公司</h4>
+                    <p>用科技创造绿色未来</p>
+                    <p style="margin-top:8px;">专注于环境工程领域的技术创新与应用，致力于为客户提供专业、高效、可持续的环保解决方案。</p>
+                </div>
+                <div>
+                    <h4>快速链接</h4>
+                    <p><a href="index.html">首页</a></p>
+                    <p><a href="about.html">关于我们</a></p>
+                    <p><a href="products.html">服务项目</a></p>
+                    <p><a href="contact.html">联系我们</a></p>
+                </div>
+                <div>
+                    <h4>服务项目</h4>
+                    <p><a href="products.html">污水处理</a></p>
+                    <p><a href="products.html">大气治理</a></p>
+                    <p><a href="products.html">固废处理</a></p>
+                    <p><a href="products.html">环境咨询</a></p>
+                </div>
+                <div>
+                    <h4>联系方式</h4>
+                    <p>📍 江苏省常州市金坛区</p>
+                    <p>📞 17714667111</p>
+                    <p>📧 2032882wzy@tongji.edu.cn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 江苏同申环境科技有限公司. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
