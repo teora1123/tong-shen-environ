@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系江苏同申环境科技有限公司 — 地址：江苏省常州市金坛区金坛大道90号华罗庚创新中心，电话：17714667111，邮箱：2032882wzy@tongji.edu.cn。">
+    <title>联系我们 — 江苏同申环境科技有限公司</title>
+    <link rel="stylesheet" href="css/style.css?v=11">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* 表单 */
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 8px;
+        }
+
+        .contact-form .form-subtitle {
+            color: var(--gray-500);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--gray-700);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: var(--gray-50);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+            background: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-group .error-msg {
+            color: #dc2626;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: #dc2626;
+        }
+
+        .form-group.error .error-msg {
+            display: block;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form-success .success-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+        }
+
+        .form-success h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        /* 联系信息 */
+        .contact-info h2 {
+            margin-bottom: 24px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-bg);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .info-item h4 {
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        .info-item p {
+            color: var(--gray-500);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-form {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">同申环境</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li class="nav-item">
+                    <a href="about.html">关于我们</a>
+                    <div class="nav-dropdown">
+                        <a href="about.html">公司简介</a>
+                        <a href="about.html#values">核心价值观</a>
+                        <a href="about.html#timeline">发展历程</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html">服务项目</a>
+                    <div class="nav-dropdown">
+                        <a href="products.html">污水处理</a>
+                        <a href="products.html">大气治理</a>
+                        <a href="products.html">固废处理</a>
+                        <a href="products.html">生态修复</a>
+                        <a href="products.html">环境评估</a>
+                        <a href="products.html">环保咨询</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p class="breadcrumb"><a href="index.html">首页</a> / 联系我们</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 80px;">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- 表单 -->
+                <div class="contact-form" id="contactForm">
+                    <h2>发送消息</h2>
+                    <p class="form-subtitle">填写以下信息，我们将尽快与您联系</p>
+                    <form id="messageForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                            <span class="error-msg">请输入姓名</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱 *</label>
+                            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                            <span class="error-msg">请输入有效的邮箱地址</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">电话</label>
+                            <input type="tel" id="phone" name="phone" placeholder="请输入您的联系电话">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言 *</label>
+                            <textarea id="message" name="message" placeholder="请描述您的需求，我们将为您提供专业建议" required></textarea>
+                            <span class="error-msg">请输入留言内容</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1.05rem;">提交留言</button>
+                    </form>
+                </div>
+
+                <!-- 成功提示（默认隐藏） -->
+                <div class="contact-form form-success" id="formSuccess">
+                    <div class="success-icon">✅</div>
+                    <h3>留言已提交！</h3>
+                    <p>感谢您的留言，我们将在 1-2 个工作日内与您联系。</p>
+                </div>
+
+                <!-- 联系信息 -->
+                <div class="contact-info">
+                    <h2>联系方式</h2>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>公司地址</h4>
+                            <p>江苏省常州市金坛区金坛大道90号<br>华罗庚创新中心办公楼一楼47号</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>联系电话</h4>
+                            <p>17714667111</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>电子邮箱</h4>
+                            <p>2032882wzy@tongji.edu.cn</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4>工作时间</h4>
+                            <p>周一至周五 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>江苏同申环境科技有限公司</h4>
+                    <p>用科技创造绿色未来</p>
+                    <p style="margin-top:8px;">专注于环境工程领域的技术创新与应用，致力于为客户提供专业、高效、可持续的环保解决方案。</p>
+                </div>
+                <div>
+                    <h4>快速链接</h4>
+                    <p><a href="index.html">首页</a></p>
+                    <p><a href="about.html">关于我们</a></p>
+                    <p><a href="products.html">服务项目</a></p>
+                    <p><a href="contact.html">联系我们</a></p>
+                </div>
+                <div>
+                    <h4>服务项目</h4>
+                    <p><a href="products.html">污水处理</a></p>
+                    <p><a href="products.html">大气治理</a></p>
+                    <p><a href="products.html">固废处理</a></p>
+                    <p><a href="products.html">环境咨询</a></p>
+                </div>
+                <div>
+                    <h4>联系方式</h4>
+                    <p>📍 江苏省常州市金坛区</p>
+                    <p>📞 17714667111</p>
+                    <p>📧 2032882wzy@tongji.edu.cn</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 江苏同申环境科技有限公司. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
